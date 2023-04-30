@@ -53,7 +53,7 @@ app.post('/submit',  (reqs, res)=>{
 
     const jsonData = JSON.stringify(data);
 
-    const url =  "https://us18.api.mailchimp.com/3.0/lists/699d9d63fa" ;
+    const url =  process.env.URL ;
 
     const options = {
         method: "POST",
@@ -80,5 +80,5 @@ app.post('/submit',  (reqs, res)=>{
 })
 
 app.listen( 3000, ()=>{
-    console.log("Listening on port 4000");
+    console.log("Listening on port 3000");
 })
